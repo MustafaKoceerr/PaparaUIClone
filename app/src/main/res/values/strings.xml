@@ -6647,7 +6647,7 @@ Tekrar deneyebilirsin."</string>
     <string name="login_forgot_password_email_description">E-posta adresini giriyorsun.</string>
     <string name="login_forgot_password_phone_description">Cep telefon numaranı giriyorsun.</string>
     <string name="login_forgot_password_placeholder">E-posta adresi ya da cep numarası</string>
-    <string name="login_having_trouble">Sorun mu yaşıyorsun?</string>
+    <string name="login_having_trouble"><u>Sorun mu yaşıyorsun?</u></string>
     <string name="login_new_device">Yeni cihaz onayı</string>
     <string name="login_or_social_options">ya da</string>
     <string name="login_password_header">Giriş yapmak için lütfen Papara şifreni gir.</string>
@@ -7446,7 +7446,7 @@ Tekrar deneyebilirsin."</string>
     <string name="onboarding_login_text">Giriş Yap</string>
     <string name="onboarding_register_text">Hesap Oluştur</string>
     <string name="onboarding_title_1">Işık hızında, ücretsiz para gönder.</string>
-    <string name="onboarding_title_2">Borçlanma, kazan.</string>
+    <string name="onboarding_title_2">Borçlanma, kazan.\n</string>
     <string name="onboarding_title_3">Cashback ile harcadıkça anında nakit kazan.</string>
     <string name="onboarding_title_4">Harcamalar, faturalar, kumanda sende.</string>
     <string name="onboarding_title_5">Papara ile kolayca ödeme al.</string>
@@ -11102,4 +11102,5 @@ Tekrar deneyebilirsin."</string>
     <string name="btn_login_txt">Giriş Yap</string>
     <string name="btn_register_txt">Hesap Oluştur</string>
     <string name="papara">papara</string>
+    <string name="or">ya da</string>
 </resources>

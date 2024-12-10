@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.kocerlabs.paparauiclone.databinding.FragmentViewPagerBinding
 import com.kocerlabs.paparauiclone.ui.base.BaseFragment
 import com.kocerlabs.paparauiclone.ui.onboarding.BoardingFifthFragment
@@ -29,9 +31,9 @@ class ViewPagerFragment : BaseFragment<FragmentViewPagerBinding>() {
     }
 
     private fun initBtnClickers() {
-        with(binding!!){
-//            btnLogin.setOnClickListener()
-//            btnRegister.setOnClickListener()
+        with(binding!!) {
+            btnLogin.setOnClickListener { navigateToOtherFragment(ViewPagerFragmentDirections.viewPagerFragmentToLoginFragment()) }
+            btnRegister.setOnClickListener { navigateToOtherFragment(ViewPagerFragmentDirections.viewPagerFragmentToRegisterFragment()) }
         }
     }
 
@@ -58,6 +60,9 @@ class ViewPagerFragment : BaseFragment<FragmentViewPagerBinding>() {
         }
     }
 
+    private fun navigateToOtherFragment(action: NavDirections) {
+        findNavController().navigate(action)
+    }
 
 
 }
