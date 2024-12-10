@@ -324,7 +324,7 @@
     <string name="auth_required_mail">E-Posta alanı zorunludur.</string>
     <string name="auth_required_name_field">Ad alanı zorunludur.</string>
     <string name="auth_required_surname_field">Soyad alanı zorunludur.</string>
-    <string name="auth_security_policy">Güvenlik Bildirgesi</string>
+    <string name="auth_security_policy"><u>Güvenlik Bildirgesi</u></string>
     <string name="auth_send_email">E-posta Gönder</string>
     <string name="auth_surname">Soyad</string>
     <string name="auth_tckn_valid_error">Geçersiz kimlik numarası girdin.</string>
@@ -11099,4 +11099,7 @@ Tekrar deneyebilirsin."</string>
     <string name="zxing_button_ok">OK</string>
     <string name="zxing_msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
     <string name="zxing_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="btn_login_txt">Giriş Yap</string>
+    <string name="btn_register_txt">Hesap Oluştur</string>
+    <string name="papara">papara</string>
 </resources>

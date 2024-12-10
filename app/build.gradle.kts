@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kocerlabs.paparauiclone"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -117,4 +117,8 @@ dependencies {
 
     // OKHTTP Interceptor
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // Others
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
+
 }

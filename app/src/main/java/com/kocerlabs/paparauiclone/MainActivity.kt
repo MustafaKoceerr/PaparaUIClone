@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
         /**
          * Burada toolbar yardımıyla fragment'ların isimlerinin yukarıda görünmesini sağladık.

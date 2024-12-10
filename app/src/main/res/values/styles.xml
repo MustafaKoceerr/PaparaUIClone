@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnBoardingBaseButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+    </style>
+
+</resources>
