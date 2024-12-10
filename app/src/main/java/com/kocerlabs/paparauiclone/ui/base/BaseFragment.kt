@@ -1,4 +1,4 @@
-package com.kocerlabs.simplifiedcodingmvvm.ui.base
+package com.kocerlabs.paparauiclone.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
