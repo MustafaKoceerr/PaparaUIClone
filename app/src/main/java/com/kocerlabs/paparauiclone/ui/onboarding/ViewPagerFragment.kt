@@ -1,6 +1,9 @@
 package com.kocerlabs.viewpager2withnavigation.onboarding
 
-import android.graphics.Paint
+import BoardingFirstFragment
+import BoardingFourthFragment
+import BoardingSecondFragment
+import BoardingThirdFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +11,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kocerlabs.paparauiclone.databinding.FragmentViewPagerBinding
 import com.kocerlabs.paparauiclone.ui.base.BaseFragment
+import com.kocerlabs.paparauiclone.ui.onboarding.BoardingFifthFragment
 
 
 class ViewPagerFragment : BaseFragment<FragmentViewPagerBinding>() {
@@ -17,30 +21,43 @@ class ViewPagerFragment : BaseFragment<FragmentViewPagerBinding>() {
     ): FragmentViewPagerBinding = FragmentViewPagerBinding.inflate(inflater, container, false)
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = super.onCreateView(inflater, container, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initViewPagers()
+        initBtnClickers()
 
-
-//        val fragmentList = listOf<Fragment>(
-//            FirstScreen(),
-//            SecondScreen(),
-//            ThirdScreen()
-//        )
-//
-//        val adapter = ViewPagerAdapter(
-//            fragmentList,
-//            requireActivity().supportFragmentManager,
-//            viewLifecycleOwner.lifecycle
-//        )
-//
-//        binding.viewPager.adapter = adapter
-
-        return view
     }
+
+    private fun initBtnClickers() {
+        with(binding!!){
+//            btnLogin.setOnClickListener()
+//            btnRegister.setOnClickListener()
+        }
+    }
+
+
+    private fun initViewPagers() {
+        val fragmentList = listOf<Fragment>(
+            BoardingFirstFragment(),
+            BoardingSecondFragment(),
+            BoardingThirdFragment(),
+            BoardingFourthFragment(),
+            BoardingFifthFragment(),
+        )
+
+        val adapter = ViewPagerAdapter(
+            fragmentList,
+            requireActivity().supportFragmentManager,
+            viewLifecycleOwner.lifecycle
+        )
+        with(binding!!) {
+            viewPager2.adapter = adapter
+
+            dotIndicator.visibility = View.VISIBLE
+            dotIndicator.attachTo(viewPager2)
+        }
+    }
+
 
 
 }
