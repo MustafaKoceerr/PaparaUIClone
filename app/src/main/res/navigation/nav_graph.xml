@@ -10,4 +10,9 @@
         android:name="com.kocerlabs.paparauiclone.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/paparaCardFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.paparacard.PaparaCardFragment"
+        android:label="fragment_papara_card"
+        tools:layout="@layout/fragment_papara_card" />
 </navigation>
