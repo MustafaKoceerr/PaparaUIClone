@@ -24,5 +24,8 @@
     <string name="login_signin_google">Google ile Giriş Yap</string>
     <string name="mail_or_phone_number">E-posta adresi ya da cep numarası</string>
     <string name="login_description">E-posta adresi, cep numarası ya da Google hesabından biriyle giriş yap.</string>
+    <string name="hint_register">Cep telefonu numarası</string>
+    <string name="register_detail_txt">Cep telefonu numaran ya da Google hesabından biriyle hesap aç.</string>
+    <string name="register_signup_google">Google ile Hesap Oluştur</string>
 
 </resources>
