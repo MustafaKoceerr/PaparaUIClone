@@ -116,7 +116,7 @@
 
             <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
                 android:id="@+id/dotIndicator"
-                android:layout_width="122dp"
+                android:layout_width="140dp"
                 android:layout_height="10dp"
                 android:layout_marginBottom="8dp"
                 app:dampingRatio="0.5"
