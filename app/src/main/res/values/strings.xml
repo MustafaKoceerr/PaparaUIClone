@@ -27,5 +27,6 @@
     <string name="hint_register">Cep telefonu numarası</string>
     <string name="register_detail_txt">Cep telefonu numaran ya da Google hesabından biriyle hesap aç.</string>
     <string name="register_signup_google">Google ile Hesap Oluştur</string>
+    <string name="enter_password">6 haneli şifreni gir.</string>
 
 </resources>

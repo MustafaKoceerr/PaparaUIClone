@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.kocerlabs.paparauiclone.databinding.FragmentLoginBinding
 import com.kocerlabs.paparauiclone.ui.base.BaseFragment
+import com.kocerlabs.paparauiclone.util.goToBack
+import com.kocerlabs.paparauiclone.util.goToOtherFragment
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override fun getFragmentBinding(
@@ -16,6 +18,12 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding!!.btnContinue.setOnClickListener {
+            goToOtherFragment(LoginFragmentDirections.loginFragmentToPasswordFragment())
+        }
 
+        binding!!.btnBack.setOnClickListener {
+            goToBack()
+        }
     }
 }

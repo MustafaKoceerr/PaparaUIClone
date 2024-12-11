@@ -29,14 +29,19 @@
         android:id="@+id/loginFragment"
         android:name="com.kocerlabs.paparauiclone.ui.auth.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_nav_account"
-            app:destination="@id/nav_account" />
+            android:id="@+id/loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.kocerlabs.paparauiclone.ui.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" />
 </navigation>
