@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_qr"
-    app:startDestination="@id/homeFragment3">
-
+    app:startDestination="@id/boardingThirdFragment">
     <fragment
-        android:id="@+id/homeFragment3"
-        android:name="com.kocerlabs.paparauiclone.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/boardingThirdFragment"
+        android:name="BoardingThirdFragment"
+        android:label="BoardingThirdFragment" />
 </navigation>

@@ -120,5 +120,8 @@ dependencies {
 
     // Others
     implementation("com.tbuonomo:dotsindicator:5.1.0")
+    // https://mvnrepository.com/artifact/com.makeramen/roundedimageview
+    implementation("com.makeramen:roundedimageview:2.3.0")
+
 
 }

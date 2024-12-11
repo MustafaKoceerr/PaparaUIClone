@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_payment"
-    app:startDestination="@id/paparaCardFragment2">
-
+    app:startDestination="@id/boardingSecondFragment">
     <fragment
-        android:id="@+id/paparaCardFragment2"
-        android:name="com.kocerlabs.paparauiclone.ui.paparacard.PaparaCardFragment"
-        android:label="fragment_papara_card"
-        tools:layout="@layout/fragment_papara_card" />
+        android:id="@+id/boardingSecondFragment"
+        android:name="BoardingSecondFragment"
+        android:label="BoardingSecondFragment" />
 </navigation>

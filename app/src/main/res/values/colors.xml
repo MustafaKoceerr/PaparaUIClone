@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="default_white_color">#F0F0F0</color>
+    <color name="pager_bg">#EEEEEE</color>
+    <color name="pager_stroke">#DDDDDD</color>
     <color name="papara_background">#ffffffff</color>
     <color name="papara_badge_background">#ffff3030</color>
     <color name="papara_black">#ff202326</color>
@@ -89,7 +92,8 @@
     <color name="border_color">#ffeeeeee</color>
     <color name="money_rounding_donation_icon">#ffea3131</color>
     <color name="checkbox_stroke_color">#ffced5db</color>
-    <color name="private_pension_survey_icon_grey">#ffe6e6e6</color>    <color name="menu_icon">#ff080b0e</color>
+    <color name="private_pension_survey_icon_grey">#ffe6e6e6</color>
+    <color name="menu_icon">#ff080b0e</color>
     <color name="secondary_text_color">#ff8b959e</color>
     <color name="default_icon_color">#ff202326</color>
     <color name="stroke_black">#ff080b0e</color>

@@ -28,5 +28,7 @@
     <string name="register_detail_txt">Cep telefonu numaran ya da Google hesabından biriyle hesap aç.</string>
     <string name="register_signup_google">Google ile Hesap Oluştur</string>
     <string name="enter_password">6 haneli şifreni gir.</string>
+    <string name="account_type">Türk Lirası Hesabı</string>
+    <string name="iban_no"><u>TR11 3452 6785 7896 9029 4680 11</u></string>
 
 </resources>

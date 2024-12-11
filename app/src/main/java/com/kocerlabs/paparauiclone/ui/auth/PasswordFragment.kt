@@ -11,6 +11,7 @@ import com.kocerlabs.paparauiclone.R
 import com.kocerlabs.paparauiclone.databinding.FragmentPasswordBinding
 import com.kocerlabs.paparauiclone.ui.base.BaseFragment
 import com.kocerlabs.paparauiclone.util.goToBack
+import com.kocerlabs.paparauiclone.util.goToOtherFragment
 
 class PasswordFragment : BaseFragment<FragmentPasswordBinding>() {
     val TAG = "PasswordFragment"
@@ -243,6 +244,7 @@ class PasswordFragment : BaseFragment<FragmentPasswordBinding>() {
                 ) {
                     if (after == 1) {
                         // todo view model'e istek at ve doğrulama yap
+                        goToOtherFragment(PasswordFragmentDirections.passwordFragmentToNavAccount())
                     }
                 }
             })
