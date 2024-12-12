@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kocerlabs.paparauiclone.R
 import com.kocerlabs.paparauiclone.databinding.FragmentHomeBinding
@@ -16,13 +18,16 @@ import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment4
 import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment5
 import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment6
 import com.kocerlabs.viewpager2withnavigation.onboarding.ViewPagerAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -58,7 +63,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun initTransactions() {
+        viewModel.transactions.observe(viewLifecycleOwner, Observer {
 
+        })
+
+        viewModel.getTransactions()
     }
 
 }

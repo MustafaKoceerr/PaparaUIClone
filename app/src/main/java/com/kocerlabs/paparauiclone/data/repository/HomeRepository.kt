@@ -1,4 +1,12 @@
 package com.kocerlabs.paparauiclone.data.repository
 
-class HomeRepository {
+import com.kocerlabs.paparauiclone.data.network.HomeApi
+import javax.inject.Inject
+
+class HomeRepository @Inject constructor(
+    private val api: HomeApi,
+) : SafeApiCall() {
+
+    suspend fun getTransactions() = safeApiCall { api.getTransactions() }
+
 }
