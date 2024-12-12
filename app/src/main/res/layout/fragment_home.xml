@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
+        android:gravity="center_horizontal"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +81,6 @@
                 app:layout_constraintTop_toTopOf="@id/imgDrawableMenu" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -118,10 +117,10 @@
                 android:id="@+id/dotIndicator"
                 android:layout_width="140dp"
                 android:layout_height="10dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 app:dampingRatio="0.5"
                 app:dotsColor="@color/black"
-                android:layout_marginTop="16dp"
                 app:dotsCornerRadius="20dp"
                 app:dotsSize="10dp"
                 app:dotsSpacing="2dp"
@@ -131,7 +130,166 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/viewPager2"
                 app:stiffness="300" />
+
+            <TextView
+                android:id="@+id/txtTransactionsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/arrow_right_drawable"
+                android:fontFamily="@font/papara_regular"
+                android:gravity="center"
+                android:text="HESAP HAREKETLERİ"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotIndicator" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTransactionsTitle" />
+
+            <TextView
+                android:id="@+id/txtCashbackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/arrow_right_drawable"
+                android:fontFamily="@font/papara_regular"
+                android:gravity="center"
+                android:text="CASHBACK"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerTransactions" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCashback"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/drawable_grey_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/txtCashbackTitle">
+
+                <TextView
+                    android:id="@+id/txtThisMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bu ay kazandığın"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtCanEarn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bu ay kazanabileceğin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtThisMonth" />
+
+                <TextView
+                    android:id="@+id/txtThisMonthMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="₺535,00"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@id/txtThisMonth"
+                    app:layout_constraintTop_toBottomOf="@id/txtThisMonth" />
+
+                <TextView
+                    android:id="@+id/txtCanEarnMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="₺2.225,00"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@id/txtCanEarn"
+                    app:layout_constraintTop_toBottomOf="@id/txtCanEarn" />
+
+                <View
+                    android:id="@+id/viewSplitter"
+                    android:layout_width="0dp"
+                    android:layout_height="3dp"
+                    android:background="@color/pager_stroke"
+                    app:layout_constraintBottom_toBottomOf="@id/imgCashback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgCashback" />
+
+                <ImageView
+                    android:id="@+id/imgCashback"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/pager_bg"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_info_cashback"
+                    app:layout_constraintEnd_toEndOf="@id/viewSplitter"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="@id/viewSplitter"
+                    app:layout_constraintTop_toBottomOf="@id/txtThisMonthMoney" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInviteFriend"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/drawable_pink_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintTop_toBottomOf="@id/layoutCashback">
+
+                <TextView
+                    android:id="@+id/txtInviteFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="Arkadaşını Davet Et,\nBirlikte Kazan"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtMoreInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_regular"
+                    android:text="@string/more_info"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtInviteFriend" />
+
+                <ImageView
+                    android:id="@+id/imgGift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_wrap_up_gift"
+                    app:layout_constraintBottom_toBottomOf="@id/txtMoreInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtInviteFriend"
+                    app:layout_constraintTop_toTopOf="@id/txtInviteFriend" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </ScrollView>
 
 
