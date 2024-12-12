@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kocerlabs.paparauiclone.R
 import com.kocerlabs.paparauiclone.databinding.FragmentHomeBinding
@@ -64,7 +65,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private fun initTransactions() {
         viewModel.transactions.observe(viewLifecycleOwner, Observer {
-
+            binding!!.recyclerTransactions.apply {
+                adapter = TransactionAdapter(it)
+                layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL, false)
+            }
         })
 
         viewModel.getTransactions()
