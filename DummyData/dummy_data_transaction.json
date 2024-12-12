@@ -1,6 +1,6 @@
 [
     {
-        "drawableUrl": "https://example.com/image8.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_akbank.jpg",
         "title": "ATM - Para Çekme",
         "description": "AKBANK/AFYON PARK AFYON AV",
         "price": 1000.00,
@@ -9,7 +9,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image1.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.svg",
         "title": "YouTube",
         "description": "Papara Cashback",
         "price": 10.00,
@@ -18,7 +18,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image2.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.svg",
         "title": "YouTube",
         "description": "Papara Card",
         "price": 52.99,
@@ -27,7 +27,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image3.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_transfer.svg",
         "title": "Mustafa Koçer",
         "description": "Para Transferi",
         "price": 500.00,
@@ -36,7 +36,7 @@
         "extraDesc": "Başka bankadan transferim"
     },
     {
-        "drawableUrl": "https://example.com/image4.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_kentkart.png",
         "title": "Kent Kart",
         "description": "Papara Card",
         "price": 25.00,
@@ -45,7 +45,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image5.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.svg",
         "title": "Netflix",
         "description": "Papara Card",
         "price": 1.00,
@@ -54,7 +54,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image6.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.svg",
         "title": "Netflix",
         "description": "Papara Card",
         "price": 1.00,
@@ -63,7 +63,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image7.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.svg",
         "title": "Spotify",
         "description": "Papara Cashback",
         "price": 20.00,
@@ -72,7 +72,7 @@
         "extraDesc": ""
     },
     {
-        "drawableUrl": "https://example.com/image8.jpg",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.svg",
         "title": "Spotify",
         "description": "Papara Card",
         "price": 32.99,
