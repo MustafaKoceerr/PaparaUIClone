@@ -10,4 +10,6 @@ data class TransactionModel(
     var description: String,
     var price: Double,
     var transactionDate: String,
-):Parcelable
+    var isSpending: Boolean,
+    var extraDesc: String,
+) : Parcelable
