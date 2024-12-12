@@ -5,9 +5,8 @@ import retrofit2.http.GET
 
 interface HomeApi {
 
-
     @GET("dummy_data_transaction.json")
-    suspend fun getTransactions(): TransactionModel
+    suspend fun getTransactions(): List<TransactionModel>
 
 //    val URL = "https://dummyjson.com/"
 }

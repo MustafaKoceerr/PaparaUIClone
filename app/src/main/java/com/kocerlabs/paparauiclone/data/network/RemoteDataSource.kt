@@ -1,10 +1,26 @@
 package com.kocerlabs.paparauiclone.data.network
 
-class RemoteDataSource {
-    companion object{
-        private val BASE_URL_DUMMY = "https://dummyjson.com/"
-        private val BASE_URL_GIT = "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/"
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
+class RemoteDataSource @Inject constructor() {
+companion object{
+     const val BASE_URL_DUMMY = "https://dummyjson.com/"
+     const val BASE_URL_GIT =
+        "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/"
+
+}
+
+    fun <Api> buildApi(
+        api: Class<Api>,
+        url: String
+    ): Api { // retrofit nesnesini yaratacak olan generic fonksiyon
+        return Retrofit.Builder()
+            .baseUrl(url)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api)
     }
 
 }
