@@ -6,6 +6,7 @@ plugins {
     kotlin("plugin.serialization") version "2.0.21"
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -122,6 +123,8 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:5.1.0")
     // https://mvnrepository.com/artifact/com.makeramen/roundedimageview
     implementation("com.makeramen:roundedimageview:2.3.0")
+
+
 
 
 }

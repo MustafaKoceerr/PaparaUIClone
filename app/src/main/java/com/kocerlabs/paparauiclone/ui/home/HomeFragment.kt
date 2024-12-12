@@ -23,6 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         container: ViewGroup?
     ): FragmentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -31,6 +32,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         bottomNav.visibility = View.VISIBLE
 
         initViewPagers()
+        initTransactions()
     }
 
     private fun initViewPagers() {
@@ -55,5 +57,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
+    private fun initTransactions() {
+
+    }
 
 }
