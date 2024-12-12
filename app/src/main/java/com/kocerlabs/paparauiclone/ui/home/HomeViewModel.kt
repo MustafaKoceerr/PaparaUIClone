@@ -24,6 +24,7 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _transactions.value = repository.getTransactions()
+                // todo gelen istekleri date'e göre sırala ve 2 isteği alıp, transaction'a eşitle.
                 Log.d(TAG, "Data fetch: ${_transactions.value}")
             } catch (e: Exception) {
                 Log.d(TAG, "Cant get data: ${e.message}")
