@@ -6,6 +6,7 @@ plugins {
     kotlin("plugin.serialization") version "2.0.21"
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -14,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kocerlabs.paparauiclone"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -105,14 +106,25 @@ dependencies {
 
 
     // HILT
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation("com.google.dagger:hilt-android:2.53")
+    ksp("com.google.dagger:hilt-android-compiler:2.53")
     implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
 
+    // ViewPager2
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
 
     // KOTLIN COROUTINES
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
     // OKHTTP Interceptor
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // Others
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
+    // https://mvnrepository.com/artifact/com.makeramen/roundedimageview
+    implementation("com.makeramen:roundedimageview:2.3.0")
+
+
+
+
 }

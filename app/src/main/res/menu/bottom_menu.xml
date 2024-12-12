@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Home" />
-    <item
-        android:id="@+id/paparaCardFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Profile" />
-    <item
-        android:id="@+id/thirdFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Settings" />
+    <item android:icon="@drawable/ic_home_menu" android:id="@id/nav_account" android:title="@null"/>
+    <item android:icon="@drawable/ic_qr_menu" android:id="@id/nav_qr" android:title="@null"/>
+    <item android:icon="@drawable/ic_money_menu" android:id="@id/nav_money_transfer" android:title="@null"/>
+    <item android:icon="@drawable/ic_payment_menu" android:id="@id/nav_payment" android:title="@null"/>
+    <item android:icon="@drawable/ic_card_menu" android:id="@id/nav_papara_card" android:title="@null"/>
 </menu>

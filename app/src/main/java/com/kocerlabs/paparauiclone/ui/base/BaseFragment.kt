@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
 // Data binding, view model'e ihtiyacımız var.
-abstract class BaseFragment<B : ViewBinding>() : Fragment() {
+abstract class BaseFragment<B : ViewBinding?>() : Fragment() {
 // Buradaki abstract fonksiyonları kullanarak, gerçek fragment'a geçince ihtiyacımız olan class'ları verecekler.
 
 //    protected lateinit var userPreferences: UserPreferences
 
-    protected lateinit var binding: B
+    protected var binding: B? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +26,7 @@ abstract class BaseFragment<B : ViewBinding>() : Fragment() {
 //        lifecycleScope.launch {
 //            userPreferences.authToken.first()
 //        }
-        return binding.root
+        return binding?.root
     }
 
 
@@ -34,5 +34,10 @@ abstract class BaseFragment<B : ViewBinding>() : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
     ): B
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
 
 }

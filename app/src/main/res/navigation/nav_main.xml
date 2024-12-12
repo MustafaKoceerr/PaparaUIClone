@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_account">
+    <include app:graph="@navigation/nav_money_transfer" />
+    <include app:graph="@navigation/nav_papara_card" />
+    <include app:graph="@navigation/nav_payment" />
+    <include app:graph="@navigation/nav_qr" />
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/nav_account">
+        <include app:graph="@navigation/nav_account" />
+    </navigation>
+    <include app:graph="@navigation/nav_account" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.kocerlabs.viewpager2withnavigation.onboarding.ViewPagerFragment"
+        android:label="ViewPagerFragment">
+        <action
+            android:id="@+id/viewPagerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/viewPagerFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/passwordFragment_to_nav_account"
+            app:destination="@id/nav_account" />
+    </fragment>
+</navigation>
