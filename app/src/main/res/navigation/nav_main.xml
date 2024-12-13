@@ -55,11 +55,34 @@
         app:destination="@id/nav_left_menu" />
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.kocerlabs.paparauiclone.ui.onboarding.WelcomeFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginSavedUserFragment"
+            app:destination="@id/loginSavedUserFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginSavedUserFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.LoginSavedUserFragment"
+        android:label="LoginSavedUserFragment"
+        tools:layout="@layout/fragment_login_saved_user" >
+        <action
+            android:id="@+id/loginSavedUserFragment_to_wrongPasswordFragment"
+            app:destination="@id/wrongPasswordFragment" />
+        <action
+            android:id="@+id/loginSavedUserFragment_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/loginSavedUserFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wrongPasswordFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.WrongPasswordFragment"
+        android:label="fragment_wrong_password"
+        tools:layout="@layout/fragment_wrong_password" />
 </navigation>

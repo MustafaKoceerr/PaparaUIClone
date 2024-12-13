@@ -31,5 +31,7 @@
     <string name="account_type">Türk Lirası Hesabı</string>
     <string name="iban_no"><u>TR11 3452 6785 7896 9029 4680 11</u></string>
     <string name="more_info"><u>Detaylı Bilgi</u></string>
+    <string name="forget_me"><u>Beni Unut</u></string>
+    <string name="forget_password"><u>Şifremi unuttum</u></string>
 
 </resources>
