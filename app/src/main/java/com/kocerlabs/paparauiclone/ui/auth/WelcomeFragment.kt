@@ -1,4 +1,4 @@
-package com.kocerlabs.paparauiclone.ui.onboarding
+package com.kocerlabs.paparauiclone.ui.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
