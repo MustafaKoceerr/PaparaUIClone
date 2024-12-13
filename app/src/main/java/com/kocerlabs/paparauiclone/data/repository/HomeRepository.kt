@@ -1,6 +1,7 @@
 package com.kocerlabs.paparauiclone.data.repository
 
 import com.kocerlabs.paparauiclone.R
+import com.kocerlabs.paparauiclone.data.database.UserPreferences
 import com.kocerlabs.paparauiclone.data.network.HomeApi
 import com.kocerlabs.paparauiclone.data.network.model.StoryModel
 import com.kocerlabs.paparauiclone.data.network.model.TransactionModel
@@ -8,6 +9,7 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(
     private val api: HomeApi,
+    private val preferences: UserPreferences
 ) : SafeApiCall() {
 
     suspend fun getTransactions(): List<TransactionModel> = safeApiCall { api.getTransactions() }
@@ -24,5 +26,10 @@ class HomeRepository @Inject constructor(
             StoryModel(R.drawable.img_wrap_up_cards, "Kartını Tasarla"),
             StoryModel(R.drawable.img_wrap_up_papara_iban, "Aylık Özet"),
         )
+    }
+
+    suspend fun saveAuthToken(token: String) {
+        preferences.saveAuthToken(token)
+        // şimdi view model'den bu fonksiyonu çağırabiliriz.
     }
 }

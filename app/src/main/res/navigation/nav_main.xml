@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_account">
+    app:startDestination="@id/welcomeFragment">
     <include app:graph="@navigation/nav_money_transfer" />
     <include app:graph="@navigation/nav_papara_card" />
     <include app:graph="@navigation/nav_payment" />
@@ -53,4 +53,13 @@
     <action
         android:id="@+id/go_to_nav_left_menu"
         app:destination="@id/nav_left_menu" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.onboarding.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
 </navigation>
