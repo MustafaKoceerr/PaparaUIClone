@@ -1,10 +1,10 @@
 [
     {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_akbank.jpg",
-        "title": "ATM - Para Çekme",
-        "description": "AKBANK/AFYON PARK AFYON AV",
-        "price": 1000.00,
-        "transactionDate": "2024-11-23T20:55:45",
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.png",
+        "title": "YouTube",
+        "description": "Papara Card",
+        "price": 52.99,
+        "transactionDate": "2024-12-02T12:30:15",
         "isSpending": true,
         "extraDesc": ""
     },
@@ -17,12 +17,12 @@
         "isSpending": false,
         "extraDesc": ""
     },
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.png",
-        "title": "YouTube",
-        "description": "Papara Card",
-        "price": 52.99,
-        "transactionDate": "2024-12-02T12:30:15",
+      {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_akbank.jpg",
+        "title": "ATM - Para Çekme",
+        "description": "AKBANK/AFYON PARK AFYON AV",
+        "price": 1000.00,
+        "transactionDate": "2024-12-03T14:20:45",
         "isSpending": true,
         "extraDesc": ""
     },
@@ -41,18 +41,10 @@
         "description": "Papara Card",
         "price": 25.00,
         "transactionDate": "2024-12-04T10:00:00",
-        "isSpending": false,
+        "isSpending": true,
         "extraDesc": ""
     },
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
-        "title": "Netflix",
-        "description": "Papara Card",
-        "price": 1.00,
-        "transactionDate": "2024-12-05T18:15:30",
-        "isSpending": false,
-        "extraDesc": ""
-    },
+
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
         "title": "Netflix",
@@ -62,15 +54,16 @@
         "isSpending": true,
         "extraDesc": ""
     },
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
-        "title": "Spotify",
-        "description": "Papara Cashback",
-        "price": 20.00,
-        "transactionDate": "2024-12-08T20:55:45",
-        "isSpending": true,
-        "extraDesc": ""
+        {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
+        "title": "Netflix",
+        "description": "Papara Card",
+        "price": 1.00,
+        "transactionDate": "2024-12-05T18:15:30",
+        "isSpending": false,
+        "extraDesc": "iade"
     },
+
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
         "title": "Spotify",
@@ -78,6 +71,15 @@
         "price": 32.99,
         "transactionDate": "2024-12-08T20:55:45",
         "isSpending": true,
+        "extraDesc": ""
+    },
+        {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
+        "title": "Spotify",
+        "description": "Papara Cashback",
+        "price": 20.00,
+        "transactionDate": "2024-12-08T20:55:45",
+        "isSpending": false,
         "extraDesc": ""
     }
 ]
