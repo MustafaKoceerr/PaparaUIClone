@@ -97,7 +97,7 @@ dependencies {
 
     // GLIDE
     implementation("com.github.bumptech.glide:glide:4.16.0")
-
+    implementation("com.caverock:androidsvg:1.4")
 
     // DATASTORE
     implementation("androidx.datastore:datastore-preferences:1.1.1")
@@ -123,8 +123,6 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:5.1.0")
     // https://mvnrepository.com/artifact/com.makeramen/roundedimageview
     implementation("com.makeramen:roundedimageview:2.3.0")
-
-
 
 
 }

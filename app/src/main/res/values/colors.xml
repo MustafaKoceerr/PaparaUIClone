@@ -339,7 +339,7 @@
     <color name="investment_close_button_color">#ffdde7ee</color>
     <color name="sketch_share_color_border">#ffededed</color>
     <color name="m3_ref_palette_neutral_variant60">#ff938f99</color>
-    <color name="transparent">#890b0b0b</color>
+    <color name="transparent">#00000000</color>
     <color name="step_arrow_color">#ffced5dc</color>
     <color name="text_color_1">#ff1b1b1b</color>
     <color name="stream_ui_accent_red">#ffff3742</color>
