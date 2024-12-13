@@ -1,13 +1,5 @@
 [
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
-        "title": "Spotify",
-        "description": "Papara Card",
-        "price": 32.99,
-        "transactionDate": "2024-12-08T20:55:45",
-        "isSpending": true,
-        "extraDesc": ""
-    },
+   
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
         "title": "Spotify",
@@ -15,6 +7,15 @@
         "price": 20.00,
         "transactionDate": "2024-12-08T20:55:45",
         "isSpending": false,
+        "extraDesc": ""
+    },
+     {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_spotify.png",
+        "title": "Spotify",
+        "description": "Papara Card",
+        "price": 32.99,
+        "transactionDate": "2024-12-08T20:55:45",
+        "isSpending": true,
         "extraDesc": ""
     },
     {
@@ -62,6 +63,15 @@
         "isSpending": false,
         "extraDesc": "Başka bankadan transferim"
     },
+     {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.png",
+        "title": "YouTube",
+        "description": "Papara Cashback",
+        "price": 10.00,
+        "transactionDate": "2024-12-02T12:30:15",
+        "isSpending": false,
+        "extraDesc": ""
+    },
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.png",
         "title": "YouTube",
@@ -70,14 +80,6 @@
         "transactionDate": "2024-12-02T12:30:15",
         "isSpending": true,
         "extraDesc": ""
-    },
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_youtube.png",
-        "title": "YouTube",
-        "description": "Papara Cashback",
-        "price": 10.00,
-        "transactionDate": "2024-12-02T12:30:15",
-        "isSpending": false,
-        "extraDesc": ""
     }
+   
 ]
