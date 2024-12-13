@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kocerlabs.paparauiclone.data.network.model.TransactionModel
 import com.kocerlabs.paparauiclone.databinding.ViewholderTransactionsBinding
+import com.kocerlabs.paparauiclone.util.colorHelper
+import com.kocerlabs.paparauiclone.util.formatTransactionDates
 
 class TransactionAdapter(val transactionList: List<TransactionModel>) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
@@ -16,8 +18,9 @@ class TransactionAdapter(val transactionList: List<TransactionModel>) :
             with(binding) {
                 txtTitle.text = model.title
                 txtDescription.text = model.description
-                txtDate.text = model.transactionDate
+                txtDate.text = formatTransactionDates(model.transactionDate)
                 txtMoney.text = "₺${model.price}"
+                txtMoney.setTextColor(colorHelper(itemView.context, model.isSpending))
 
                 Glide.with(itemView.context)
                     .load(model.drawableUrl)
