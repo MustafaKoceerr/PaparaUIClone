@@ -31,4 +31,9 @@
         android:name="com.kocerlabs.paparauiclone.ui.home.accounttransactions.AccountTransactionsFragment"
         android:label="fragment_account_transactions"
         tools:layout="@layout/fragment_account_transactions" />
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.transactiondetails.TransactionDetailsFragment"
+        android:label="fragment_transaction_details"
+        tools:layout="@layout/fragment_transaction_details" />
 </navigation>
