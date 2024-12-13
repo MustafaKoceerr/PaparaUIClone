@@ -18,7 +18,6 @@ import dagger.hilt.android.AndroidEntryPoint
 abstract class BottomBaseFragment<B : ViewBinding?>() : BottomSheetDialogFragment() {
 // Buradaki abstract fonksiyonları kullanarak, gerçek fragment'a geçince ihtiyacımız olan class'ları verecekler.
 
-//    protected lateinit var userPreferences: UserPreferences
 
     protected var binding: B? = null
 
@@ -28,11 +27,8 @@ abstract class BottomBaseFragment<B : ViewBinding?>() : BottomSheetDialogFragmen
         savedInstanceState: Bundle?
     ): View? {
         binding = getFragmentBinding(inflater, container)
-//        userPreferences = UserPreferences(requireContext())
 
-//        lifecycleScope.launch {
-//            userPreferences.authToken.first()
-//        }
+
         return binding?.root
     }
 

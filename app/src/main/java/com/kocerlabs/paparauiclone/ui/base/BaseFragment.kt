@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
+import com.kocerlabs.paparauiclone.data.database.UserPreferences
+import javax.inject.Inject
 
 // Data binding, view model'e ihtiyacımız var.
 abstract class BaseFragment<B : ViewBinding?>() : Fragment() {
 // Buradaki abstract fonksiyonları kullanarak, gerçek fragment'a geçince ihtiyacımız olan class'ları verecekler.
 
-//    protected lateinit var userPreferences: UserPreferences
+
 
     protected var binding: B? = null
 
@@ -21,11 +24,8 @@ abstract class BaseFragment<B : ViewBinding?>() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = getFragmentBinding(inflater, container)
-//        userPreferences = UserPreferences(requireContext())
 
-//        lifecycleScope.launch {
-//            userPreferences.authToken.first()
-//        }
+
         return binding?.root
     }
 
