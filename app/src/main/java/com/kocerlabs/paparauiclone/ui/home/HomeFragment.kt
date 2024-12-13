@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kocerlabs.paparauiclone.R
@@ -39,6 +40,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         initViewPagers()
         initTransactions()
+        initStories()
+        initSetOnClickers()
+    }
+
+    private fun initSetOnClickers() {
+        with(binding!!) {
+            imgDrawableMenu.setOnClickListener {
+                findNavController().navigate(R.id.go_to_nav_left_menu)
+            }
+        }
     }
 
     private fun initViewPagers() {
@@ -67,11 +78,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         viewModel.transactions.observe(viewLifecycleOwner, Observer {
             binding!!.recyclerTransactions.apply {
                 adapter = TransactionAdapter(it)
-                layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL, false)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, true)
             }
         })
 
         viewModel.getTransactions()
+    }
+
+    private fun initStories() {
+        viewModel.stories.observe(viewLifecycleOwner, Observer { storyList ->
+            binding!!.recyclerStory.apply {
+                adapter = StoryAdapter(storyList)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            }
+        })
+        viewModel.getStories()
     }
 
 }
