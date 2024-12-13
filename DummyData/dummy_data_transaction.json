@@ -24,7 +24,7 @@
         "title": "Netflix",
         "description": "Papara Card",
         "price": 1.00,
-        "transactionDate": "2024-12-05T18:15:30",
+        "transactionDate": "2024-12-06T18:15:30",
         "isSpending": false,
         "extraDesc": "iade"
     },
@@ -33,7 +33,7 @@
         "title": "Netflix",
         "description": "Papara Card",
         "price": 1.00,
-        "transactionDate": "2024-12-06T19:45:15",
+        "transactionDate": "2024-12-05T19:45:15",
         "isSpending": true,
         "extraDesc": ""
     },
