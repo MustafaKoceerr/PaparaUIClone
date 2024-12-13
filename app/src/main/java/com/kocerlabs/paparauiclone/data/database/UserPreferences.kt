@@ -27,9 +27,21 @@ class UserPreferences @Inject constructor(
             preferences[KEY_AUTH] ?: ""
         }
 
-    suspend fun saveAuthToken(authToken: String) {
+    suspend fun saveAuthToken(paramAuthToken: String) {
         context.dataStore.edit { preferences ->
-            preferences[KEY_AUTH] = authToken
+            preferences[KEY_AUTH] = paramAuthToken
+        }
+    }
+
+
+    val fullName: Flow<String>
+        get() = context.dataStore.data.map { preferences ->
+            preferences[KEY_NAME] ?: ""
+        }
+
+    suspend fun saveName(paramFullName: String) {
+        context.dataStore.edit { preferences ->
+            preferences[KEY_NAME] = paramFullName
         }
     }
 
@@ -37,6 +49,7 @@ class UserPreferences @Inject constructor(
         // At the top level of your kotlin file:
         val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "my_data_store")
         private val KEY_AUTH = stringPreferencesKey("my_data_store")
+        private val KEY_NAME = stringPreferencesKey("my_data_store")
     }
 
     suspend fun clear() {
