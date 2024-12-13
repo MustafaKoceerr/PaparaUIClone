@@ -1,11 +1,15 @@
 package com.kocerlabs.simplifiedcodingmvvm.di
 
+import com.kocerlabs.paparauiclone.data.network.AuthApi
+import com.kocerlabs.paparauiclone.data.network.DynamicUserInterceptor
 import com.kocerlabs.paparauiclone.data.network.HomeApi
 import com.kocerlabs.paparauiclone.data.network.RemoteDataSource
+import com.kocerlabs.paparauiclone.data.network.RemoteDataSource.Companion.BASE_URL_DUMMY
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -14,6 +18,20 @@ object AppModule {
     @Provides
     fun provideHomeApi(remoteDataSource: RemoteDataSource): HomeApi {
         return remoteDataSource.buildApi(HomeApi::class.java, RemoteDataSource.BASE_URL_GIT)
+    }
+
+    @Provides
+    fun provideOkHttpClient(authInterceptor: DynamicUserInterceptor): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor(authInterceptor)
+            .build()
+    }
+
+    @Provides
+    fun provideAuthApi(
+        remoteDataSource: RemoteDataSource, client: OkHttpClient
+    ): AuthApi {
+        return remoteDataSource.buildApiWithHeader(AuthApi::class.java, BASE_URL_DUMMY, client)
     }
 
     /*
