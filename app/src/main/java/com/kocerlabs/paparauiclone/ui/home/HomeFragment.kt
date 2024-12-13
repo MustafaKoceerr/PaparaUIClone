@@ -19,6 +19,7 @@ import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment3
 import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment4
 import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment5
 import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomePagerFragment6
+import com.kocerlabs.paparauiclone.util.goToOtherFragment
 import com.kocerlabs.viewpager2withnavigation.onboarding.ViewPagerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,6 +49,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         with(binding!!) {
             imgDrawableMenu.setOnClickListener {
                 findNavController().navigate(R.id.go_to_nav_left_menu)
+            }
+            imgChat.setOnClickListener {
+                goToOtherFragment(HomeFragmentDirections.homeFragmentToChatsFragment())
             }
         }
     }
