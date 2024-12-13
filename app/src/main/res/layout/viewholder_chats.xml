@@ -2,52 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="90dp">
 
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imgIcon"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:padding="4dp"
-        android:scaleType="fitCenter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/miketyson"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_cashback" />
+        app:riv_border_color="#FFFFFF"
+        app:riv_border_width="2dp"
+        app:riv_corner_radius="20dp" />
+
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/papara_bold"
         android:text="YouTube"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/imgIcon"
         app:layout_constraintTop_toTopOf="@+id/imgIcon" />
 
     <TextView
-        android:id="@+id/txtDescription"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtLastMessage"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="18dp"
+        android:maxLines="2"
         android:text="Hey Mike!"
-        app:layout_constraintBottom_toBottomOf="@+id/imgIcon"
-        app:layout_constraintStart_toStartOf="@id/txtTitle"
-        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/txtName"
+        app:layout_constraintTop_toBottomOf="@id/txtName" />
 
     <TextView
-        android:id="@+id/txtMoney"
+        android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:text="Bugün 11:55"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txtTitle" />
+        app:layout_constraintTop_toTopOf="@id/txtName" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/pager_stroke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtName"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
