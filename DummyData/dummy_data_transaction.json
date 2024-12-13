@@ -18,15 +18,7 @@
         "isSpending": true,
         "extraDesc": ""
     },
-    {
-        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
-        "title": "Netflix",
-        "description": "Papara Card",
-        "price": 1.00,
-        "transactionDate": "2024-12-06T19:45:15",
-        "isSpending": true,
-        "extraDesc": ""
-    },
+ 
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
         "title": "Netflix",
@@ -35,6 +27,15 @@
         "transactionDate": "2024-12-05T18:15:30",
         "isSpending": false,
         "extraDesc": "iade"
+    },
+      {
+        "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_netflix.png",
+        "title": "Netflix",
+        "description": "Papara Card",
+        "price": 1.00,
+        "transactionDate": "2024-12-06T19:45:15",
+        "isSpending": true,
+        "extraDesc": ""
     },
     {
         "drawableUrl": "https://raw.githubusercontent.com/MustafaKoceerr/PaparaUIClone/refs/heads/main/DummyData/ic_kentkart.png",
