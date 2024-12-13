@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(
     private val api: HomeApi,
-    private val preferences: UserPreferences
 ) : SafeApiCall() {
 
     suspend fun getTransactions(): List<TransactionModel> = safeApiCall { api.getTransactions() }
@@ -28,8 +27,5 @@ class HomeRepository @Inject constructor(
         )
     }
 
-    suspend fun saveAuthToken(token: String) {
-        preferences.saveAuthToken(token)
-        // şimdi view model'den bu fonksiyonu çağırabiliriz.
-    }
+
 }
