@@ -53,6 +53,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             imgChat.setOnClickListener {
                 goToOtherFragment(HomeFragmentDirections.homeFragmentToChatsFragment())
             }
+            txtTransactionsTitle.setOnClickListener {
+                goToOtherFragment(HomeFragmentDirections.homeFragmentToAccountTransactionsFragment())
+            }
         }
     }
 
@@ -83,11 +86,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             binding!!.recyclerTransactions.apply {
                 adapter = TransactionAdapter(it)
                 layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, true)
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             }
         })
 
-        viewModel.getTransactions()
+        viewModel.getLastTwoTransactions()
     }
 
     private fun initStories() {
