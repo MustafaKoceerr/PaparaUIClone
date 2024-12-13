@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.kocerlabs.paparauiclone.data.network.model.StoryModel
 import com.kocerlabs.paparauiclone.data.network.model.TransactionModel
 import com.kocerlabs.paparauiclone.data.repository.HomeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,6 +21,10 @@ class HomeViewModel @Inject constructor(
     val transactions: LiveData<List<TransactionModel>>
         get() = _transactions
 
+    private val _stories: MutableLiveData<List<StoryModel>> = MutableLiveData()
+    val stories: LiveData<List<StoryModel>>
+        get() = _stories
+
     fun getTransactions() {
         viewModelScope.launch {
             try {
@@ -30,7 +35,11 @@ class HomeViewModel @Inject constructor(
                 Log.d(TAG, "Cant get data: ${e.message}")
             }
         }
-
     }
+
+    fun getStories() {
+        _stories.value = repository.getStories()
+    }
+
 
 }
