@@ -22,24 +22,24 @@ class MoneyTransferFragment : BottomBaseFragment<FragmentMoneyTransferBinding>()
     ): FragmentMoneyTransferBinding =
         FragmentMoneyTransferBinding.inflate(inflater, container, false)
 
-//    private val viewModel: DrawerMenuViewModel by viewModels()
+    private val viewModel: DrawerMenuViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        initSetOnClickers(binding!!.root)
-//        initMoneyTransferMenu()
+        initSetOnClickers(binding!!.root)
+        initMoneyTransferMenu()
     }
 
-//    private fun initMoneyTransferMenu() {
-//        viewModel.leftMenu.observe(viewLifecycleOwner, Observer { moneyTransfer ->
-//            with(binding!!.recyclerLeftMenu) {
-//                adapter = MenuAdapter(moneyTransfer)
-//                layoutManager =
-//                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-//            }
-//        })
-//        viewModel.getMoneyTransferMenu()
-//    }
+    private fun initMoneyTransferMenu() {
+        viewModel.moneyTransferMenu.observe(viewLifecycleOwner, Observer { moneyTransfer ->
+            with(binding!!.recyclerLeftMenu) {
+                adapter = MenuAdapter(moneyTransfer)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            }
+        })
+        viewModel.getMoneyTransferMenu()
+    }
 
 }

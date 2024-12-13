@@ -1,4 +1,4 @@
-package com.kocerlabs.paparauiclone.ui.qr
+package com.kocerlabs.paparauiclone.ui.home.drawermenu
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,39 +7,41 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kocerlabs.paparauiclone.databinding.FragmentQRBinding
+import com.kocerlabs.paparauiclone.databinding.FragmentDrawerMenuBinding
 import com.kocerlabs.paparauiclone.ui.base.BottomBaseFragment
-import com.kocerlabs.paparauiclone.ui.home.drawermenu.DrawerMenuViewModel
-import com.kocerlabs.paparauiclone.ui.home.drawermenu.MenuAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
-class QRFragment : BottomBaseFragment<FragmentQRBinding>() {
+class DrawerMenuFragment : BottomBaseFragment<FragmentDrawerMenuBinding>() {
     // base fragmentta her şeyi hallettim.
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentQRBinding = FragmentQRBinding.inflate(inflater, container, false)
+    ): FragmentDrawerMenuBinding =
+        FragmentDrawerMenuBinding.inflate(layoutInflater, container, false)
 
     private val viewModel: DrawerMenuViewModel by viewModels()
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        initLeftMenu()
         initSetOnClickers(binding!!.root)
-        initQRMenu()
+
     }
 
-    private fun initQRMenu() {
-        viewModel.qrMenu.observe(viewLifecycleOwner, Observer { QRMenu ->
+    private fun initLeftMenu() {
+        viewModel.leftMenu.observe(viewLifecycleOwner, Observer { leftMenu ->
             with(binding!!.recyclerLeftMenu) {
-                adapter = MenuAdapter(QRMenu)
+                adapter = MenuAdapter(leftMenu)
                 layoutManager =
                     LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             }
         })
-        viewModel.getQRMenu()
+        viewModel.getLeftMenu()
     }
+
 
 }
