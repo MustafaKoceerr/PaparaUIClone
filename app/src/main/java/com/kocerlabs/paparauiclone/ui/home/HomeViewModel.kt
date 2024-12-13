@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.kocerlabs.paparauiclone.data.network.model.StoryModel
 import com.kocerlabs.paparauiclone.data.network.model.TransactionModel
 import com.kocerlabs.paparauiclone.data.repository.HomeRepository
+import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomeConstants.FIRST_ELEMENT
+import com.kocerlabs.paparauiclone.ui.home.viewpagerfragment.HomeConstants.SECOND_ELEMENT
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -25,12 +27,24 @@ class HomeViewModel @Inject constructor(
     val stories: LiveData<List<StoryModel>>
         get() = _stories
 
-    fun getTransactions() {
+    fun getLastTwoTransactions() {
+        viewModelScope.launch {
+            try {
+                val result = repository.getTransactions()
+                // todo gelen istekleri date'e göre sırala ve 2 isteği alıp, transaction'a eşitle.
+                val homeScreenMaterials = listOf(result[FIRST_ELEMENT], result[SECOND_ELEMENT])
+                _transactions.value = homeScreenMaterials
+            } catch (e: Exception) {
+                Log.d(TAG, "Cant get data: ${e.message}")
+            }
+        }
+    }
+
+    fun getAllTransactions() {
         viewModelScope.launch {
             try {
                 _transactions.value = repository.getTransactions()
-                // todo gelen istekleri date'e göre sırala ve 2 isteği alıp, transaction'a eşitle.
-                Log.d(TAG, "Data fetch: ${_transactions.value}")
+                Log.d(TAG, "all Data fetch: ${_transactions.value}")
             } catch (e: Exception) {
                 Log.d(TAG, "Cant get data: ${e.message}")
             }
